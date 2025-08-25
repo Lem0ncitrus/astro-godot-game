@@ -26,8 +26,11 @@ func _process(delta):
         shoot()
         fire_timer = fire_rate
 
+@export var damage := 1
+
 func shoot():
     var bullet = bullet_scene.instantiate()
     bullet.global_position = global_position
+    bullet.damage = damage
     get_tree().current_scene.add_child(bullet)
-s
+

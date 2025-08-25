@@ -8,7 +8,10 @@ func _process(delta):
     if position.y < -50:
         queue_free()
 
+@export var speed := 600
+@export var damage := 1
+
 func _on_body_entered(body):
     if body.is_in_group("asteroid"):
-        body.take_damage(1)
-        queue_free()
+        body.take_damage(damage)
+        queue_free
