@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://pef6hu1jwgm7"]
+[gd_scene load_steps=2 format=3 uid="uid://pef6hu1jwgm7"]
+
+[ext_resource type="Script" uid="uid://b6ojrj6bdaemr" path="res://Scripts/UpgradeManager.gd" id="1_dvfat"]
 
 [node name="Upgrades" type="Node2D"]
+script = ExtResource("1_dvfat")

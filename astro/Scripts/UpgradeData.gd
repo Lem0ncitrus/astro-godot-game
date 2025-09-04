@@ -1,4 +1,3 @@
-extends Node
 extends Resource
 class_name UpgradeData
 

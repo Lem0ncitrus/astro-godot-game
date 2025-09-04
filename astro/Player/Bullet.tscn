@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dmqxrovtp55hq"]
+[gd_scene load_steps=2 format=3 uid="uid://dmqxrovtp55hq"]
+
+[ext_resource type="Script" uid="uid://03pogurnjib5" path="res://Player/Bullet.gd" id="1_hnj4y"]
 
 [node name="Bullet" type="Node2D"]
+script = ExtResource("1_hnj4y")

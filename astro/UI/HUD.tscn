@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bfu8xnoxfkg7p"]
+[gd_scene load_steps=2 format=3 uid="uid://bfu8xnoxfkg7p"]
+
+[ext_resource type="Script" uid="uid://m5823l5kgis3" path="res://UI/HUD.gd" id="1_yixhe"]
 
 [node name="Hud" type="Node2D"]
+script = ExtResource("1_yixhe")

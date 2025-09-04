@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://4f28ndntuukw"]
+[gd_scene load_steps=2 format=3 uid="uid://4f28ndntuukw"]
+
+[ext_resource type="Script" uid="uid://b8vu55737ydwl" path="res://UI/Inventroy.gd" id="1_8sf1u"]
 
 [node name="Inventroy" type="Node2D"]
+script = ExtResource("1_8sf1u")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

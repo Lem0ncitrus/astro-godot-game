@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://22gbr02hxpyl"]
+[gd_scene load_steps=2 format=3 uid="uid://22gbr02hxpyl"]
+
+[ext_resource type="Script" uid="uid://qwwqh63o28y" path="res://Effects/Explosion.gd" id="1_yqkxm"]
 
 [node name="Explosion" type="Node2D"]
+script = ExtResource("1_yqkxm")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
