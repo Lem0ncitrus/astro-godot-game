@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Group Holding Area — Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Group Holding Area</h1>
+    <div class="app-header__actions">
+      <button id="addBtn" class="btn btn--primary">Add Inmate</button>
+      <button id="moveToProcessingBtn" class="btn">Move to Processing</button>
+      <button id="releaseBtn" class="btn btn--danger">Release</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <header class="panel__header">
+        <div class="panel__title">
+          <strong>Holding Capacity</strong>
+          <span id="capacityText" class="muted"></span>
+        </div>
+        <div class="panel__controls">
+          <label class="input-inline">
+            Max:
+            <input id="maxCapacity" type="number" min="1" value="12" />
+          </label>
+          <label class="input-inline">
+            Search:
+            <input id="searchInput" type="search" placeholder="Name, booking #, notes…" />
+          </label>
+          <label class="input-inline">
+            Risk:
+            <select id="riskFilter">
+              <option value="">All</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="showProcessing" />
+            <span>Show Processing</span>
+          </label>
+        </div>
+      </header>
+
+      <div class="capacity">
+        <div id="capacityBar" class="capacity__bar"></div>
+      </div>
+
+      <ul id="inmateList" class="grid"></ul>
+
+      <footer class="panel__footer">
+        <span class="muted" id="summaryText">0 selected</span>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Add / Edit Modal -->
+  <dialog id="inmateDialog" class="modal">
+    <form id="inmateForm" method="dialog">
+      <h2 id="dialogTitle">Add Inmate</h2>
+      <div class="form-grid">
+        <label>
+          Full Name
+          <input name="name" required placeholder="e.g., Jordan Smith" />
+        </label>
+        <label>
+          Booking #
+          <input name="booking" required placeholder="e.g., B-10293" />
+        </label>
+        <label>
+          Risk Level
+          <select name="risk" required>
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+        <label>
+          Notes
+          <input name="notes" placeholder="e.g., medical check requested" />
+        </label>
+      </div>
+      <menu>
+        <button value="cancel" class="btn">Cancel</button>
+        <button type="submit" class="btn btn--primary">Save</button>
+      </menu>
+      <input type="hidden" name="id" />
+    </form>
+  </dialog>
+
+  <!-- Seed data (used if data.json cannot be fetched locally) -->
+  <script id="seed-data" type="application/json">
+    {
+      "inmates": [
+        {"id":"a1","name":"Alex Moran","booking":"BK-001245","risk":"low","notes":"calm","status":"holding","checkIn": "2025-09-04T15:50:00Z"},
+        {"id":"b2","name":"Jamie Price","booking":"BK-001246","risk":"medium","notes":"requesting phone call","status":"holding","checkIn": "2025-09-04T15:40:00Z"},
+        {"id":"c3","name":"Riley Chen","booking":"BK-001247","risk":"high","notes":"separate if crowded","status":"holding","checkIn": "2025-09-04T15:35:00Z"},
+        {"id":"d4","name":"Taylor Brooks","booking":"BK-001248","risk":"low","notes":"","status":"processing","checkIn": "2025-09-04T15:10:00Z"}
+      ]
+    }
+  </script>
+
+  <script src="./app.js"></script>
+</body>
+</html>

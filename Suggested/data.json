@@ -1,0 +1,10 @@
+{
+  "inmates": [
+    { "id": "a1", "name": "Alex Moran",  "booking": "BK-001245", "risk": "low",    "notes": "calm",                       "status": "holding",    "checkIn": "2025-09-04T15:50:00Z" },
+    { "id": "b2", "name": "Jamie Price", "booking": "BK-001246", "risk": "medium", "notes": "requesting phone call",       "status": "holding",    "checkIn": "2025-09-04T15:40:00Z" },
+    { "id": "c3", "name": "Sam Taylor",  "booking": "BK-001247", "risk": "high",   "notes": "aggressive behavior noted",   "status": "processing", "checkIn": "2025-09-04T15:30:00Z" },
+    { "id": "d4", "name": "Riley Brown", "booking": "BK-001248", "risk": "medium", "notes": "medical attention needed",    "status": "processing", "checkIn": "2025-09-04T15:20:00Z" },
+    { "id": "e5", "name": "Jordan Lee",  "booking": "BK-001249", "risk": "low",    "notes": "waiting for lawyer",          "status": "holding",    "checkIn": "2025-09-04T15:10:00Z" },
+    { "id": "f6", "name": "Taylor Green","booking": "BK-001250", "risk": "high",   "notes": "under influence of substances","status": "processing", "checkIn": "2025-09-04T15:00:00Z" }
+    ]
+}
